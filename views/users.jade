@@ -1,0 +1,25 @@
+extends layout
+
+block content
+ h4.jumbotron List of Users
+ table.table.table-striped
+  thead
+   tr
+    th FirstName
+    th LastName
+    th Email
+    th Password
+    th
+  tbody
+  each user in users
+   tr
+    td=user.firstname
+    td=user.lastname
+    td=user.email
+    td=user.password
+    td
+     form(method='GET' action='/users/delete-user')
+      input.form-control.btn.btn-danger(type='submit', value='Delete')
+    td
+     form(method='GET' action='/users/delete-user')
+      input.form-control.btn.btn-warning(type='submit', value='Edit')

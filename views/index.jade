@@ -1,0 +1,15 @@
+extends layout
+
+block content
+ h3.jumbotron=message
+ form(method='GET' action='/users/submit-user')
+  div.form-group
+  input.form-control(type='text', name='firstname', placeholder='firstname',required)
+  div.form-group
+  input.form-control(type='text', name='lastname', placeholder='lastname',required)
+  div.form-group
+  input.form-control(type='email', name='username', placeholder='email')
+  div.form-group
+  input.form-control(type='password', name='password', placeholder='password')
+  div.form-group
+  input.form-control.btn.btn-primary(type='submit', value='Add User')
